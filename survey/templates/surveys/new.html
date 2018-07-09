@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}New Survey Question{% endblock %}
+
+{% block 'content' %}
+<form class="survey" method="post">
+    <div class="form-content">
+        {% csrf_token %}
+        {{ form }}
+    </div>
+    <button type="submit" class="save">Save Question</button>
+</form>
+
+<a href="{% url 'response_list' %}"><< Back to Question List</a>
+{% endblock %}

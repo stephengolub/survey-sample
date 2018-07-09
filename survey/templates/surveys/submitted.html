@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}Survey Saved{% endblock %}
+
+{% block 'content' %}
+<div class="success">
+    <span>Thank you for submitting your answer!</span>
+    <span>
+        <a href="{% url 'index' %}">Click here to answer another!</a>
+    </span>
+</div>
+{% endblock %}

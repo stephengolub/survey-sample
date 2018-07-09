@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}Surveys{% endblock %}
+
+{% block 'content' %}
+{% if random_survey is None %}
+<div class="no-surveys">
+    There are no surveys for you to answer at this time!
+</div>
+{% else %}
+<form class="survey" method="post">
+    <h2>{{ random_survey }}</h2>
+    <div class="form-content">
+        {% csrf_token %}
+        {{ form }}
+    </div>
+    <button type="submit" class="save">Submit Response</button>
+</form>
+{% endif %}
+{% endblock %}

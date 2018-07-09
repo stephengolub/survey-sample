@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}Answers to: {{ question }}{% endblock %}
+
+{% block 'content' %}
+{% for answer in answer_counts.values %}
+<div class="answer">
+    <div class="answer-text">
+        <span class="actual-text">{{ answer.item.choice_text }}</span>
+        <span class="answer-percentage-bar" style="width: {{ answer.percent }}%">&nbsp;</span>
+        <span class="answer-count">{{ answer.count }}</span>
+    </div>
+</div>
+{% empty %}
+<div class="no-answers">This question has no responses yet.</div>
+{% endfor %}
+<a href="{% url 'response_list' %}">&lt;&lt; Return to Question List</a>
+{% endblock %}

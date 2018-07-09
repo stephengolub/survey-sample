@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}Survey Questions{% endblock %}
+
+{% block 'content' %}
+<table class="question-list">
+    <tr>
+        <th class="question-text">Question</th>
+        <th class="answer-count">Num Responses</th>
+    </tr>
+{% for question in questions %}
+<tr class="question-row">
+    <td class="question-text">
+        <a href="{% url 'single_question' question.id %}">{{ question.question_text }}</a></td>
+    <td class="answer-count">{{ question.answer_set.count }}</td>
+</tr>
+{% endfor %}
+</table>
+<p>
+<a href="{% url 'new_question' %}">+ New Question</a>
+{% endblock %}

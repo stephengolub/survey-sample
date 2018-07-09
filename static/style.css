@@ -1,0 +1,118 @@
+html, body {
+    font-family: Helvetica, Arial;
+}
+
+body {
+    max-width: 1080px;
+}
+
+header, content {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+.no-answers {
+    background-color: #CCC;
+    padding: 10px;
+}
+
+.no-answers, .answer {
+    width: 75%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.no-answers, .answer .responder {
+    font-style: italic;
+}
+
+.answer .responder {
+    font-size: .75em;
+}
+
+.answer .responder::before {
+    content: "-";
+    margin-right: 3px;
+    display: inline-block;
+}
+
+.answer .answer-text {
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.answer .answer-text .actual-text {
+    z-index: 1;
+    position: relative;
+}
+
+.answer .answer-text .answer-percentage-bar {
+    background-color: #E9AFA3;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.answer .answer-count {
+    position: absolute;
+    right: 10px;
+}
+
+.survey .form-content ul {
+    list-style: none;
+}
+
+.survey .form-content ul#id_answer > li:first-child {
+    display: none;
+}
+
+.survey .form-content ul#id_answer > li {
+    margin: 4px 0px;
+}
+
+.survey .form-content ul#id_answer > li label {
+    cursor: pointer;
+    background-color: #DDD;
+    padding: 2px 5px;
+    margin-left: -15px;
+}
+
+.survey .form-content ul#id_answer > li label:hover {
+    background-color: #BBB;
+}
+
+.survey .form-content ul#id_answer > li input[type="radio"] {
+    display: none;
+}
+
+.survey .form-content ul#id_answer > li input[type="radio"]:checked + label {
+    background-color: green;
+    color: #FFF;
+}
+
+.helptext {
+    font-size: .75em;
+    color: red;
+    font-style: italic;
+}
+
+label[for="id_option_entry"] {
+    display: block;
+}
+
+@media (max-width: 500px) {
+    h1 { font-size: 1.25em; }
+    h2 { font-size: 1.15em; }
+    h3 { font-size: 1.00em; }
+}
+
+@media (max-width: 1024px) {
+    h1 { font-size: 1.65em; }
+    h2 { font-size: 1.55em; }
+    h3 { font-size: 1.45em; }
+}

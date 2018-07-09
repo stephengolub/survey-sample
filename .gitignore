@@ -1,0 +1,11 @@
+# Cruft
+*.py[cod]
+.DS_Store
+*.log
+*.pid
+*.swp
+
+# C extensions
+*.so
+
+__pycache__
