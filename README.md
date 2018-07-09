@@ -10,7 +10,7 @@ This app runs on mysql, so our installation instructions assumes you already hav
 1. Clone Repo: `git clone git@github.com:nickburns2006/survey-sample.git`
 2. Change directories into where you cloned it.
 3. Install requirements: `pip install -r requirements.txt`
-4. Update the local `ini` file to have the settings for your specific environment:
+4. Update the local `survey/settings.ini` file to have the settings for your specific environment:
 
 ```
 [settings]
